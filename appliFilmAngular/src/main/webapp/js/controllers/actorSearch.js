@@ -2,25 +2,25 @@
 	var app = angular.module("film");
 	
 	app.controller('actorSearch', function($http, $scope) {
-		var self = this;
+		//var self = this;
 		
-		self.films = [];
+		$scope.acteurs = [];
 		
-		self.film = null;
+		$scope.acteur = null;
 		
 		
-		$scope.getActor = function() {
-					
-			$scope.query="";
+		$scope.listActeurs = function() {
+					console.log("getActor");
+			//$scope.query="";
 
 			$http({
 				method : 'GET',
 				url : 'services/acteurs-populaires/'
-			}).then(function successCallback(result) {
+			}).then(function successCallback(response) {
 			
-				console.log("successCallback",result.data.results);
-				$scope.actors=result.data.results;
-			}, function errorCallback(result) {
+				console.log("successCallback",response.data);
+				$scope.acteurs=response.data;
+			}, function errorCallback(response) {
 
 			});
 		};

@@ -30,7 +30,9 @@ public class ActeurRestController {
 	
 	@RequestMapping(value = "/acteurs-populaires/", method = RequestMethod.GET)
 	public ResponseEntity<List<ActeurRepresentation>> listAll() {
+		System.out.println("toc toc listACTEUR");
 		List<ActeurRepresentation> acteurRepresentations = acteurDao.findAll();
+		System.out.println("toc toc FINDaLL");
 		if (acteurRepresentations == null) {
 			return new ResponseEntity<List<ActeurRepresentation>>(HttpStatus.NO_CONTENT);
 		} else {

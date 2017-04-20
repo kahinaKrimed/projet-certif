@@ -95,6 +95,7 @@ public class ActeurDaoImpl implements ActeurDao{
 
 	@Override
 	public List<ActeurRepresentation> findAll() {
+		System.out.println("je suis dans le findall");
 		Query query = em.createQuery("select a from ActeurRepresentation a");
 		return query.getResultList();		
 	}

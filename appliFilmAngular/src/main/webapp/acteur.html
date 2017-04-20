@@ -8,10 +8,8 @@
 			<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"></link>
 			<script type="text/javascript" src="js/angular.min.js"></script>
 			<script type="text/javascript" src="js/app.js" charset="utf-8"></script>
-<!-- 			<script type="text/javascript" src="js/controllers/filmSearch.js" charset="utf-8"></script> -->
-			<script type="text/javascript" src="js/controllers/actorSearch.js" charset="utf-8"></script>
-<!-- 			<script type="text/javascript" src="js/controllers/actorSearch.js" charset="utf-8"></script>  -->
-<!-- 			<script type="text/javascript" src="js/controllers/film.js" charset="utf-8"></script>  -->
+			<script type="text/javascript" src="js/controllers/actorSearch.js" charset="utf-8"></script> 
+
 			
 	</head>
 <body ng-app="film" class="backgroud-appli">
@@ -32,7 +30,7 @@
 			<div>
 				<div ng-controller="actorSearch" class="div-org">
 					<input placeholder="rechercher..." ng-model="acteurRecherche"/>
- 					<button ng-click="getActor()" class="btn btn-primary btn-lg btn-center">Acteurs Populaires</button> 
+ 					<button ng-click="listActeurs()" class="btn btn-primary btn-lg btn-center">Acteurs Populaires</button> 
 					<div ng-repeat="acteur in acteurs |filter:acteurRecherche"  >
 <!-- 						<hr> -->
 <!-- 						<div class="org"> -->
@@ -60,8 +58,7 @@
 				    </thead>
 				    <tbody>
 				      <tr>
-				        <td class="tr-org"><img ng-src="http://image.tmdb.org/t/p/w154{{film.poster_path}}"/></td>
-				        <td class="tr-org">{{acteur.profil_path}}</td>
+				        <td class="tr-org"><img ng-src="http://image.tmdb.org/t/p/w154{{acteur.profile_path}}"/></td>
 				        <td class="tr-org">{{acteur.name}}</td>
 				        <td class="tr-org">{{acteur.adult}}</td>
 				         <td class="tr-org">{{acteur.popularity}}</td>
@@ -90,6 +87,6 @@
 <!-- 					</div>  -->
 					
 <!-- 				</div> -->
-<!-- 			</div> -->
+ 			</div> 
 </body>
 </html>
