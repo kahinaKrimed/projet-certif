@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="film">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Recherche</title>
+		
+			<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+			<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"></link>
+			<script type="text/javascript" src="js/angular.min.js"></script>
+			<script type="text/javascript" src="js/app.js" charset="utf-8"></script>
+			<script type="text/javascript" src="js/controllers/filmPopulaire.js" charset="utf-8"></script>
+<!-- 			<script type="text/javascript" src="js/controllers/actorSearch.js" charset="utf-8"></script>  -->
+<!-- 			<script type="text/javascript" src="js/controllers/film.js" charset="utf-8"></script>  -->
+			
+	</head>
+<body ng-app="film" class="backgroud-appli">
+			<nav class="navbar navbar-inverse">
+						  <div class="container-fluid">
+						    <div class="navbar-header">
+						      <a class="navbar-brand" href="#">MovieShow</a>
+						    </div>
+						    <ul class="nav navbar-nav">
+						      <li class="active"><a href="index.html">Accueil</a></li>
+						      <li><a href="film.html">Films</a></li>
+						      <li><a href="acteur.html">Acteurs</a></li>
+						      
+						    </ul>
+						  </div>
+			</nav>
+<!-- 			<h1 class="well well-lg">Welcome to the Movie Db </h1> -->
+			<div>
+				<div ng-controller="filmSearch" class="div-org">
+					<input placeholder="rechercher..." ng-model="filmRecherche"/>
+ 					<button ng-click="listFilmPopulaire()" class="btn btn-primary btn-lg btn-center">Films Populaires</button> 
+					<div ng-repeat="film in films |filter:filmRecherche"  >
+<!-- 						<hr> -->
+<!-- 						<div class="org"> -->
+<!-- 						<div class="bold-aspect">Titre: </div> -->
+<!-- 							<div>{{film.title}}<br></div> -->
+	
+<!-- 						<div class="bold-aspect">Résumé: </div>  -->
+<!-- 							<div>{{film.overview}}<br></div> -->
+						
+<!-- 						<div class="bold-aspect">Date de Sortie: </div> -->
+<!-- 							<div>{{film.release_date}}<br></div> -->
+<!-- 						</div> -->
+<!-- 						<div class="image-org"><img ng-src="http://image.tmdb.org/t/p/w300{{film.poster_path}}"/></div> -->
+
+
+
+				<table class="table table-striped">
+				    <thead>
+				      <tr>
+				        <th style="width:30%" class="th-org">Poster</th>
+				        <th style="width:15%" class="th-org">Titre</th>
+				        <th style="width:30%" class="th-org">Résumé</th>
+				        <th style="width:15%" class="th-org">Date de Sorie</th>
+				        <th style="width:10%" class="th-org">Popularité</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				         <td class="tr-org"><img ng-src="http://image.tmdb.org/t/p/w154{{film.poster_path}}"/></td>
+				        <td class="tr-org">{{film.title}}</td>
+				        <td class="tr-org">{{film.overview}}</td>
+				        <td class="tr-org">{{film.release_date}}</td>
+				         <td class="tr-org">{{film.popularity}}</td>
+				      </tr>
+				      
+				    </tbody>
+				    	</div>
+				  </table>
+				
+					
+						
+					</div>
+					
+
+				</div>
+				
+	
+<!-- 			<div> -->
+<!-- 				<div ng-controller="actorSearch" class="div-org"> -->
+<!-- 				<input placeholder="rechercher..." ng-model="actorKey"/>  -->
+<!-- 					<button ng-click="getActor()" class="btn btn-primary btn-lg btn-block">Acteurs populaires</button> -->
+<!-- 					<hr> -->
+<!-- 					<div ng-repeat="actor in actors | filter:actorKey" class="actor-box">  -->
+<!-- 						<div class="actor-organisation">{{actor.name}}</div> -->
+<!-- 						<img ng-src="http://image.tmdb.org/t/p/w150{{actor.profile_path}}"/>  -->
+<!-- 					</div>  -->
+					
+<!-- 				</div> -->
+<!-- 			</div> -->
+</body>
+</html>

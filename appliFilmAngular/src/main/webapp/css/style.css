@@ -1,0 +1,60 @@
+.actor-box{
+	float:left;
+	margin:10px;
+}
+
+.actor-organisation{
+	text-align:center;
+	bold:2px;
+}
+
+.overview-organisation{
+	margin:20px;
+	float:inherit;
+	text-align:left;
+	margin:10px;
+}
+
+.bold-aspect{
+	margin:50px;
+	font-size:x-large;
+	font-family:serif;
+	Font-Weight: Bold;
+	color: navy;
+}
+
+.div-org{
+	margin:20px;
+	text-align:center;
+}
+.backgroud-appli{
+	background-color: silver;
+}
+
+.title-org{
+	color: navy;
+	margin:35px;
+}
+.title-org{
+	text-align: center;
+	bold:50px;
+	color:purple;
+}
+.image-org{
+	text-align: left;
+}
+.imageGauche{
+	text-align:center;
+}
+org{
+	text-align:right;
+}
+.th-org{
+	text-align:center;
+	font-size: 20px;
+	font-weight: bolder;
+	color:navy;
+}
+.tr-org{
+	background-color: #FFFACD;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="film">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Recherche</title>
+		
+			<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+			<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"></link>
+			<script type="text/javascript" src="js/angular.min.js"></script>
+			<script type="text/javascript" src="js/app.js" charset="utf-8"></script>
+			<script type="text/javascript" src="js/controllers/filmSearch.js" charset="utf-8"></script>
+			<script type="text/javascript" src="js/controllers/filmPopulaire.js" charset="utf-8"></script>
+			<script type="text/javascript" src="js/controllers/actorSearch.js" charset="utf-8"></script>
+<!-- 			<script type="text/javascript" src="js/controllers/film.js" charset="utf-8"></script>  -->
+
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			
+	</head>
+<body ng-app="film" class="backgroud-appli">
+
+
+<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">MovieShow</a>
+			    </div>
+			    <ul class="nav navbar-nav">
+			      <li class="active"><a href="index.html">Accueil</a></li>
+			      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.html">Films<span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="film.html">Films à l'affiche</a></li>
+				          <li><a href="filmPopulaire.html">Films populaires</a></li>
+				          <li><a href="#">Autres film</a></li>
+				        </ul>
+				   </li>
+<!-- 			      <li><a href="film.html">Films</a></li> -->
+<!-- 				      <ul class="dropdown-menu"> -->
+<!-- 				          <li><a href="film.html">Films populaires</a></li> -->
+<!-- 				          <li><a href="#">Films à l'affiche</a></li> -->
+<!-- 				          <li><a href="#">Autres films</a></li> -->
+<!-- 				       </ul> -->
+			      <li><a href="acteur.html">Acteurs</a></li>
+			      
+			    </ul>
+			  </div>
+			  
+			
+</nav>
+
+
+  				<div class="accueil-org">
+			  		<h1 class="title-org">Bienvenue à la vidéothèque Movie-Show</h1>
+			  		<src img="images/septiemeart.jpg" alt="Photo de mon gite"></src>
+			  		
+			  	</div>
+<!-- 			<h1 class="well well-lg">Welcome to the Movie Db </h1> -->
+<!-- 			<div> -->
+<!-- 				<div ng-controller="filmSearch" class="div-org"> -->
+<!-- 					<input placeholder="rechercher..." ng-model="filmRecherche"/> -->
+<!-- 					<button ng-click="list()" class="btn btn-primary btn-lg">Films à l'affiche</button> -->
+<!-- 					<div ng-repeat="film in films |filter:filmRecherche"  > -->
+<!-- 					<hr> -->
+<!-- 						<div class="bold-aspect">Titre:</div> -->
+<!-- 						{{film.title}}<br> -->
+<!-- 						<div class="bold-aspect">Résumé:</div> -->
+<!-- 						{{film.overview}}<br> -->
+<!-- 						<div class="bold-aspect">Date de Sortie:</div> -->
+<!-- 						{{film.release_date}}<br> -->
+<!-- 						<img ng-src="http://image.tmdb.org/t/p/w300{{film.poster_path}}"/> -->
+<!-- 					</div> -->
+						
+<!-- 					</div> -->
+					
+
+<!-- 				</div> -->
+			
+			
+<!-- 			<div> -->
+<!-- 				<div ng-controller="actorSearch" class="div-org"> -->
+<!-- 				<input placeholder="rechercher..." ng-model="actorKey"/>  -->
+<!-- 					<button ng-click="getActor()" >Rechercher un acteur</button> -->
+<!-- 					<hr> -->
+<!-- 					<div ng-repeat="actor in actors | filter:actorKey" class="actor-box">  -->
+<!-- 						<div class="actor-organisation">{{actor.name}}</div> -->
+<!-- 						<img ng-src="http://image.tmdb.org/t/p/w150{{actor.profile_path}}"/>  -->
+<!-- 					</div>  -->
+					
+<!-- 				</div> -->
+<!-- 			</div> -->
+</body>
+</html>
