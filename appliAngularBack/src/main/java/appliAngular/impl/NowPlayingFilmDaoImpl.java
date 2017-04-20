@@ -140,8 +140,8 @@ private RestTemplate restTemplate;
 					System.out.println(filmRepresentation.getRelease_date());
 					filmRepresentation.setPoster_path(results.getPoster_path());
 					System.out.println(filmRepresentation.getPoster_path());
-//					filmRepresentation.setPopularity(Double.parseDouble(results.getPopularity()));
-//					System.out.println(filmRepresentation.getPopularity());
+					filmRepresentation.setPopularity(Double.parseDouble(results.getPopularity()));
+					System.out.println(filmRepresentation.getPopularity());
 					em.merge(filmRepresentation);
 					listFilms.add(filmRepresentation);
 					
@@ -157,7 +157,7 @@ private RestTemplate restTemplate;
 
 	@Override
 	public List<NowPlayingFilmRepresentation> findAllFilmPopulaire() {
-		Query query = em.createQuery("select f from NowPlayingFilmRepresentation f where f.popularity >20.00");
+		Query query = em.createQuery("select f from NowPlayingFilmRepresentation f where f.popularity >30.00");
 		return query.getResultList();		
 		}
 
@@ -184,7 +184,8 @@ private RestTemplate restTemplate;
 				System.out.println(filmRepresentation.getRelease_date());
 				filmRepresentation.setPoster_path(results.getPoster_path());
 				System.out.println(filmRepresentation.getPoster_path());
-				
+				filmRepresentation.setPopularity(Double.parseDouble(results.getPopularity()));
+				System.out.println(filmRepresentation.getPopularity());
 				em.merge(filmRepresentation);
 				listFilmPop.add(filmRepresentation);
 				

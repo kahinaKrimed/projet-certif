@@ -34,7 +34,7 @@ public class NowPlayingFilmRepresentation implements Serializable {
 	@Lob
 	private String poster_path;
 	
-	//private Double popularity;
+	private Double popularity;
 	
 	public NowPlayingFilmRepresentation() {
 		super();
@@ -86,7 +86,7 @@ public class NowPlayingFilmRepresentation implements Serializable {
 
 
 
-	/*public Double getPopularity() {
+	public Double getPopularity() {
 		return popularity;
 	}
 
@@ -94,7 +94,7 @@ public class NowPlayingFilmRepresentation implements Serializable {
 
 	public void setPopularity(Double popularity) {
 		this.popularity = popularity;
-	}*/
+	}
 	
 	
 

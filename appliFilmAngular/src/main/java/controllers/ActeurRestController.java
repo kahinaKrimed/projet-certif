@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import appliAngular.dao.ActeurDao;
-import appliAngular.dao.NowPlayingFilmDao;
+
 import appliAngular.representation.ActeurRepresentation;
-import appliAngular.representation.NowPlayingFilmRepresentation;
+
 
 @RestController
 public class ActeurRestController {
